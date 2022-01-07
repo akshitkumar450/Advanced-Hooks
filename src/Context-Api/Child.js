@@ -6,7 +6,15 @@ function Child() {
   console.log(value);
 
   //   using the updated value of context
-  return <div>i am child and value from parent:{value}</div>;
+  return (
+    <div>
+      <h2>
+        Child
+        {value.toggle && " child"}
+      </h2>
+      <button onClick={value.handleToggle}>toggle</button>
+    </div>
+  );
 }
 
 export default Child;
