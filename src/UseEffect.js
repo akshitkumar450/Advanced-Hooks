@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 // if the function is not dependent on any state or props and we want to use it in useEffect ,,define that function outside the component
 // in this way on every render the function will not re-initialzed
 
-const logMessage = () => {
-  console.log("hello");
-};
+// const logMessage = () => {
+//   console.log("hello");
+// };
 
 function UseEffectEx() {
   const [val, setVal] = useState(false);
@@ -13,8 +13,12 @@ function UseEffectEx() {
 
   // if we want to log logMessage function when ever the function changes ,
   useEffect(() => {
+    //   or we can define in useEffect if the depending state is changes
+    const logMessage = () => {
+      console.log("hello", val);
+    };
     logMessage();
-  }, []);
+  }, [val]);
   return (
     <div>
       <h2>useEffect</h2>
