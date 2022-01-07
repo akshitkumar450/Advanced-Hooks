@@ -1,10 +1,11 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import "./App.css";
+import UseEffectEx from "./UseEffect";
+import UseEffect from "./UseEffect";
 import UseEffectuseLayout from "./UseEffect-useLayout";
 function App() {
   return (
     <div>
-      <UseEffectuseLayout />
+      <UseEffectEx />
     </div>
   );
 }
