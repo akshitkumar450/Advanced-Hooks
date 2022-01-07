@@ -5,6 +5,7 @@ import UseEffect from "./UseEffect";
 import UseEffectuseLayout from "./UseEffect-useLayout";
 import ContextRoot from "./Context-Api/ContextRoot";
 import Error from "./ErrorBoundary/Error";
+import Parent from "./Performance/Parent";
 function App() {
   return (
     <div>
@@ -15,9 +16,10 @@ function App() {
       {/**ERROR BOUNDARY COMPONENT
       if any of the child components of Error has any error it will be catched UI will be updated
       */}
-      <Error>
+      {/* <Error>
         <ContextRoot />
-      </Error>
+     </Error>*/}
+      <Parent />
     </div>
   );
 }
