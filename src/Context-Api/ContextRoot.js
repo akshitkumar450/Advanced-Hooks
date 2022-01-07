@@ -8,6 +8,10 @@ function ContextRoot() {
   const [toggle, setToggle] = useState(true);
   const handleToggle = () => setToggle(!toggle);
   console.log(value);
+
+  // manually throwing error for checking ErrorBoundary
+  throw Error;
+
   return (
     <div>
       <h2>context api {value.toggle && "how are you"}</h2>
