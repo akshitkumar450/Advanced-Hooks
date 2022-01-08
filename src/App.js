@@ -6,6 +6,7 @@ import UseEffectuseLayout from "./UseEffect-useLayout";
 import ContextRoot from "./Context-Api/ContextRoot";
 import Error from "./ErrorBoundary/Error";
 import Parent from "./Performance/Parent";
+import UseCallback1 from "./UseCallback1";
 function App() {
   return (
     <div>
@@ -18,8 +19,10 @@ function App() {
       */}
       {/* <Error>
         <ContextRoot />
-     </Error>*/}
-      <Parent />
+     </Error>*
+     <Parent />
+      */}
+      <UseCallback1 />
     </div>
   );
 }
