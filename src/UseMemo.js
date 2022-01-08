@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { useCallback } from "react/cjs/react.development";
 
 function UseMemo() {
@@ -9,10 +9,18 @@ function UseMemo() {
   //   even if count2  changes this will be redefine at every render
   //   if we change count1 this will return value and log the message
   // if we change count2 this will also recompute the value and log the message
-  const complex = () => {
+  //   const complex = () => {
+  //     console.log("soemthing complex");
+  //     return ((count1 * 1000) % 12.4) * 51000 - 4000;
+  //   };
+
+  //   useMemo will memoize the value of the function and it will use redefine the value is the dependency changes
+  //   now this will return the value if the count1 changes and log the message
+  //   this will not run if the count2 changes
+  const complex = useMemo(() => {
     console.log("soemthing complex");
     return ((count1 * 1000) % 12.4) * 51000 - 4000;
-  };
+  }, [count1]);
 
   const increment1 = useCallback(() => setCount1(count1 + 1), [count1]);
   const increment2 = useCallback(() => setCount2(count2 + 1), [count2]);
@@ -25,7 +33,7 @@ function UseMemo() {
       count2 :{count2}
       <button onClick={increment1}>count1</button>
       <button onClick={increment2}>count2</button>
-      complex:{complex()}
+      complex:{complex}
     </div>
   );
 }
