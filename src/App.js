@@ -7,6 +7,7 @@ import ContextRoot from "./Context-Api/ContextRoot";
 import Error from "./ErrorBoundary/Error";
 import Parent from "./Performance/Parent";
 import UseCallback1 from "./UseCallback1";
+import UseMemo from "./UseMemo";
 function App() {
   return (
     <div>
@@ -21,8 +22,9 @@ function App() {
         <ContextRoot />
      </Error>*
      <Parent />
+     <UseCallback1 />
       */}
-      <UseCallback1 />
+      <UseMemo />
     </div>
   );
 }
